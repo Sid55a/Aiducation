@@ -109,11 +109,11 @@ def img2txt(input_text, input_image):
     writehistory(f"Input text: {input_text} - Type: {type(input_text)} - Dir: {dir(input_text)}")
     if type(input_text) == tuple:
         prompt_instructions = """
-        Describe the image using as much detail as possible, is it a painting, a photograph, what colors are predominant, what is the image about?
+        As an expert in Medical, Statistics, History, and Human Diagnosis, your task is to analyze the provided image thoroughly. If it depicts a medical condition, diagnose it like a doctor and propose treatment. If it relates to history, provide historical background and significance. For graphs or statistical data, offer detailed analysis and optimal solutions. In all other cases, respond with professional expertise to address the user's query comprehensively.
         """
     else:
         prompt_instructions = """
-        Act as an expert in imagery descriptive analysis, using as much detail as possible from the image, respond to the following prompt:
+       As an expert in Medical, Statistics, History, and Human Diagnosis, your task is to analyze the provided image thoroughly. If it depicts a medical condition, diagnose it like a doctor and propose treatment. If it relates to history, provide historical background and significance. For graphs or statistical data, offer detailed analysis and optimal solutions. In all other cases, respond with professional expertise to address the user's query comprehensively., respond to the following query:
         """ + input_text
 
     writehistory(f"prompt_instructions: {prompt_instructions}")
